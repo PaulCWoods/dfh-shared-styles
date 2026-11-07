@@ -1,0 +1,74 @@
+/* ==========================================================================
+   Tokens: the DFH sites' component choices and their own tokens
+   --------------------------------------------------------------------------
+   Only what differs from the library and the dfh theme. Every other
+   component token takes its default from the library.
+   ========================================================================== */
+
+:root {
+  /* Library components ---------------------------------------------------- */
+
+  /* Accordion */
+  --accordion-border-width: var(--border-width-thin);
+  --accordion-border-style: dashed;
+  --accordion-radius: var(--radius-md);
+
+  /* Badge */
+  --badge-dot-size: var(--spacing-8);
+
+  /* Block link */
+  --block-link-line-height: var(--small-heading-line-height);
+
+  /* Card */
+  --card-font-sizing: cq;
+
+  /* Field */
+  --label-font-weight: var(--body-strong-font-weight);
+
+  /* Header and footer sit on the page surface */
+  --header-bg: var(--surface);
+  --footer-bg: var(--surface);
+  --header-bar-min-size: var(--spacing-64);
+  --header-compact-bar-min-size: var(--spacing-48);
+  --header-height: calc(var(--header-bar-min-size) + var(--spacing-8) * 2 + var(--border-width, 1px));
+  --header-compact-height: calc(var(--header-compact-bar-min-size) + var(--spacing-4) * 2 + var(--border-width, 1px));
+
+  /* Prose */
+  --prose-scroll-margin: calc(var(--header-height) + var(--safe-area-inset-top, 0px) + var(--spacing-scroll-margin));
+
+  /* Tab list */
+  --tab-list-indicator-width: var(--border-width-2);
+
+  /* Telemetry */
+  --telemetry-subtle-bg: var(--surface-muted);
+  --telemetry-gap: var(--spacing-4);
+
+  /* What the dfh theme can't say yet: a 1px quiet border (Tier 2 gives
+     every theme the default width), and panels with a border in dark mode
+     only */
+  --border-quiet: var(--border-width-thin) solid var(--border-color-quiet);
+
+  @media (prefers-color-scheme: dark) {
+    --panel-border-width: var(--border-width-thin);
+  }
+
+  /* Site components ------------------------------------------------------- */
+
+  /* Article */
+  --article-figcaption-border: var(--border-quiet);
+  --article-figcaption-padding: calc(var(--spacing) - var(--border-width));
+  --article-footer-font-size: var(--typography-font-size--1);
+
+  /* Index card: a large card's title takes the title style */
+  --card-border-top: var(--border-width-thick) solid;
+  --card-lg-title-font-family: var(--title-font-family);
+  --card-lg-title-font-size: var(--title-cq-font-size);
+  --card-lg-title-font-weight: var(--title-font-weight);
+  --card-lg-title-line-height: var(--title-line-height);
+  --card-lg-title-letter-spacing: var(--title-letter-spacing);
+  --card-lg-title-text-transform: var(--title-text-transform);
+  --card-lg-title-word-spacing: var(--title-word-spacing);
+
+  /* Section */
+  --section-spacing: var(--spacing-cushion-lg);
+}

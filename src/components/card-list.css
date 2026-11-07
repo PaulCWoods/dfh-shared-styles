@@ -1,0 +1,17 @@
+/* ==========================================================================
+   Card list: a grid of cards, each item its own container
+   ========================================================================== */
+
+:where(.card-list) {
+  li {
+    display: flex;
+    container-type: inline-size;
+  }
+
+  /* The first card spans the row */
+  :where(.section.section--strong-1st) & {
+    li:first-child {
+      grid-column: 1 / -1;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+/* ==========================================================================
+   Site trail: the header's links after the brand, behind a rule that runs
+   the height of the bar
+   ========================================================================== */
+
+.site-trail {
+  align-items: center;
+  align-self: stretch;
+  border-inline-start: var(--border-width-thin) dashed var(--border-color-quiet);
+  display: flex;
+  padding-inline-start: var(--header-gap, var(--spacing-md));
+}

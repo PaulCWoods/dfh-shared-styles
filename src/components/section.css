@@ -1,0 +1,27 @@
+/* ==========================================================================
+   Section: a band of a page behind a dashed rule, with its title
+   --------------------------------------------------------------------------
+   Its text is fluid. The title takes a text atom for its type:
+   <h2 class="section__title heading">, or .title for a stronger one.
+   ========================================================================== */
+
+:where(.section) {
+  --font-sizing: fluid;
+  border-block-start: var(--border-width-thin) dashed var(--border-color-quiet);
+  margin-block-end: var(--section-spacing, var(--spacing-cushion));
+  padding-block-start: var(--section-spacing, var(--spacing-cushion));
+}
+
+:where(.section__title) {
+  margin-block-end: var(--spacing-cushion);
+  padding-block: 0;
+  text-wrap: balance;
+
+  &[id] {
+    scroll-margin-block: var(--prose-scroll-margin, 1em);
+  }
+}
+
+.section__pagination {
+  padding-block-start: var(--section-spacing, var(--spacing-breathe));
+}

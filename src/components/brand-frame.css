@@ -1,0 +1,11 @@
+/* ==========================================================================
+   Brand frame: the box around "Design For Humans" set as display type
+   ========================================================================== */
+
+.brand-frame {
+  border: var(--brand-border-width, 0.125em) solid currentColor;
+  line-height: 0.9;
+  padding-block: var(--brand-padding-block, 0.125em);
+  padding-inline: var(--brand-padding-inline, 0.095em);
+  text-box: trim-both cap alphabetic;
+}

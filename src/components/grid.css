@@ -1,0 +1,37 @@
+/* ==========================================================================
+   Section grid settings: a section sets how its library Grid behaves
+   --------------------------------------------------------------------------
+   s-grid:sm and s-grid:xs set a smaller minimum column; s-grid:scroll-x@<md
+   makes the grid a horizontal scroller below the library's md (48em) on
+   touch screens.
+   ========================================================================== */
+
+:where(.grid) {
+  @media screen and (width < 48em) and (hover: none) {
+    :where(.s-grid\:scroll-x\@\<md) & {
+      display: flex;
+      inline-size: 100vw;
+      margin-inline: calc(var(--spacing-cushion) * -1);
+      padding-block-end: var(--spacing);
+      padding-inline: var(--spacing-cushion);
+      overflow: auto;
+      overscroll-behavior-x: contain;
+      scroll-snap-type: x mandatory;
+
+      > :where(*) {
+        flex: 1 0 90%;
+        scroll-snap-align: center;
+      }
+    }
+  }
+}
+
+:where(.s-grid\:sm .grid) {
+  --grid-min: 24rem;
+}
+
+:where(.s-grid\:xs .grid) {
+  --card-padding: var(--card-compact-padding, var(--spacing));
+  --card-inner-padding: var(--card-compact-inner-padding, var(--spacing));
+  --grid-min: 18rem;
+}

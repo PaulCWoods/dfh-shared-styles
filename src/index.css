@@ -1,0 +1,23 @@
+/* ==========================================================================
+   DFH Shared Styles
+   --------------------------------------------------------------------------
+   What the Design For Humans sites share (the blog, the course and the
+   components docs), linked after the library and its themes and before each
+   site's own CSS. Each file goes into the library's cascade layers:
+   - tokens: component choices and the sites' own tokens
+   - reset: page-wide behaviour
+   - layout: the sites' components, after the library's components and
+     layout and under its utilities. They move to the library's site layer
+     when the sites pin a library version that declares it (after 0.3.0).
+   ========================================================================== */
+
+@import url("tokens.css") layer(tokens);
+@import url("view-transitions.css") layer(reset);
+
+@import url("components/article.css") layer(layout);
+@import url("components/brand-frame.css") layer(layout);
+@import url("components/card-list.css") layer(layout);
+@import url("components/grid.css") layer(layout);
+@import url("components/index-card.css") layer(layout);
+@import url("components/section.css") layer(layout);
+@import url("components/site-trail.css") layer(layout);
