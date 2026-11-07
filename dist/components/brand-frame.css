@@ -1,0 +1,2 @@
+/* DFH Shared Styles 0.2.0, for DFH Components 0.3.0 */
+@layer layout{.brand-frame{border:var(--brand-border-width,.125em) solid currentColor;padding-block:var(--brand-padding-block,.125em);padding-inline:var(--brand-padding-inline,.095em);text-box:trim-both cap alphabetic;line-height:.9}}

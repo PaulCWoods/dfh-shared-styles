@@ -5,7 +5,8 @@ What the Design For Humans sites share on top of [DFH Components](../DFH-Compone
 ## How it's built
 
 - `src/index.css` imports each file into one of the library's cascade layers. The files themselves are plain CSS with native nesting and no layer of their own.
-- `npm run build` bundles them with Lightning CSS into `dist/dfh-site.css` (no targets, so modern CSS stays as written). Commit `dist/`.
+- `npm run build` bundles them with Lightning CSS into `dist/dfh-site.css` (no targets, so modern CSS stays as written), and writes each component alone, wrapped in the layer `index.css` gives it, to `dist/components/<name>.css`. Commit `dist/`.
+- The components docs site (`DFH-Components/packages/docs`) imports `dist/components/brand-frame.css` through a git dependency pinned to a tag; raise the tag there to take a change.
 - A release is a git tag (`0.1.0`), served by jsDelivr at `https://cdn.jsdelivr.net/gh/PaulCWoods/dfh-shared-styles@<tag>/dist/dfh-site.css`. A tag never moves: a change is a new version in `package.json` and a new tag.
 - `config.library` in `package.json` names the DFH Components version this release is built for. Each site pins both: the blog in `templates/_layout.twig` (`DFH_SHARED_CSS` in `.env` overrides it), the course in `dfh_shared_css()` in `functions.php` (`DFH_SHARED_CSS` in `wp-config.php`).
 

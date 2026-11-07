@@ -1,6 +1,6 @@
 {
   "name": "dfh-shared-styles",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "description": "What the Design For Humans sites share, on top of DFH Components",
   "type": "module",
