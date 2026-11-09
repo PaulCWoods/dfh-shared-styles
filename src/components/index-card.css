@@ -25,13 +25,7 @@
       --heading-text-transform: var(--card-lg-title-text-transform, var(--title-text-transform));
       --heading-word-spacing: var(--card-lg-title-word-spacing, var(--title-word-spacing));
 
-      --_card-padding: var(--spacing-cushion);
-      --_card-thumb-height: 100%;
-
-      .card__content,
-      .card__thumb {
-        flex: 1 0 50%;
-      }
+      --card-padding: var(--spacing-cushion);
     }
   }
 

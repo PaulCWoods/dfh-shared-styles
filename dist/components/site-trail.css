@@ -1,2 +1,0 @@
-/* DFH Shared Styles 0.3.0, for DFH Components 0.4.0 */
-@layer site{.site-trail{border-inline-start:var(--border-width-thin) dashed var(--border-color-quiet);align-self:stretch;align-items:center;padding-inline-start:var(--header-gap,var(--spacing-md));display:flex}}

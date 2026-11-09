@@ -1,0 +1,52 @@
+/* ==========================================================================
+   Reading progress: a bar along the top of the window that fills as the
+   page scrolls
+   --------------------------------------------------------------------------
+   Decoration (the scroll bar already says where the reader is), so the
+   element is aria-hidden. Hidden where the browser has no scroll-driven
+   animation or the reader prefers reduced motion.
+   Tokens: --reading-progress-color, --reading-progress-height,
+   --reading-progress-z-index.
+   Usage: <div class="reading-progress" aria-hidden="true"></div>
+   ========================================================================== */
+
+.reading-progress {
+  display: none;
+}
+
+@supports (animation-timeline: scroll()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .reading-progress {
+      /* Longhands: given the animation shorthand, Lightning CSS folds the
+         timeline into it, which browsers reject */
+      animation-name: --reading-progress;
+      animation-duration: auto;
+      animation-timing-function: linear;
+      animation-timeline: scroll(root block);
+      background-color: var(--reading-progress-color, var(--foreground-accent));
+      block-size: var(--reading-progress-height, var(--border-width-thick));
+      display: block;
+      inline-size: 100%;
+      inset-block-start: 0;
+      inset-inline-start: 0;
+      pointer-events: none;
+      position: fixed;
+      transform-origin: left;
+      z-index: var(--reading-progress-z-index, var(--z-index-sticky, 1));
+
+      &:dir(rtl) {
+        transform-origin: right;
+      }
+    }
+
+    @keyframes --reading-progress {
+      from {
+        scale: 0 1;
+      }
+
+      to {
+        scale: 1 1;
+      }
+    }
+  }
+}

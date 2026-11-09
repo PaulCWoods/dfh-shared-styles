@@ -137,36 +137,3 @@
   }
 }
 
-/* Reading progress, where the browser has scroll-driven animation */
-@supports (animation-timeline: scroll()) {
-  @media (prefers-reduced-motion: no-preference) {
-    .article__progress {
-      /* Longhands: given the animation shorthand, Lightning CSS folds the
-         timeline into it, which browsers reject */
-      animation-name: --article-progress;
-      animation-duration: auto;
-      animation-timing-function: linear;
-      animation-timeline: scroll(root block);
-      background-color: var(--article-progress-color, var(--foreground-accent));
-      block-size: var(--article-progress-height, var(--border-width-thick));
-      display: block;
-      inline-size: 100%;
-      inset-block-start: 0;
-      inset-inline-start: 0;
-      pointer-events: none;
-      position: fixed;
-      transform-origin: left;
-      z-index: var(--article-progress-z-index, 1);
-    }
-
-    @keyframes --article-progress {
-      from {
-        scale: 0 1;
-      }
-
-      to {
-        scale: 1 1;
-      }
-    }
-  }
-}

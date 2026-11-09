@@ -44,13 +44,8 @@
   --telemetry-gap: var(--spacing-4);
 
   /* What the dfh theme can't say yet: a 1px quiet border (Tier 2 gives
-     every theme the default width), and panels with a border in dark mode
-     only */
+     every theme the default width) */
   --border-quiet: var(--border-width-thin) solid var(--border-color-quiet);
-
-  @media (prefers-color-scheme: dark) {
-    --panel-border-width: var(--border-width-thin);
-  }
 
   /* Site components ------------------------------------------------------- */
 

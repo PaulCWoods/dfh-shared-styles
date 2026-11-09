@@ -19,5 +19,5 @@
 @import url("components/card-list.css") layer(site);
 @import url("components/grid.css") layer(site);
 @import url("components/index-card.css") layer(site);
+@import url("components/reading-progress.css") layer(site);
 @import url("components/section.css") layer(site);
-@import url("components/site-trail.css") layer(site);
