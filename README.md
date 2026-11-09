@@ -5,8 +5,8 @@ The CSS the Design For Humans sites share on top of [DFH Components](https://com
 Link it after the library and its theme, before a site's own CSS:
 
 ```html
-<link rel="stylesheet" href="https://components.designforhumans.blog/css/0.3.0/dfh-components.css">
-<link rel="stylesheet" href="https://components.designforhumans.blog/css/0.3.0/themes/dfh.css">
+<link rel="stylesheet" href="https://components.designforhumans.blog/css/0.4.0/dfh-components.css">
+<link rel="stylesheet" href="https://components.designforhumans.blog/css/0.4.0/themes/dfh.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/PaulCWoods/dfh-shared-styles@0.2.0/dist/dfh-site.css">
 <link rel="stylesheet" href="/css/site.css">
 ```

@@ -18,7 +18,7 @@ The rules on DFH Components' Customise page (`packages/docs/src/content/docs/sta
 | :--- | :--- |
 | Component token choices and the sites' own tokens (`tokens.css`) | `tokens` |
 | Page-wide behaviour (`view-transitions.css`) | `reset` |
-| The sites' components (`components/*.css`) | `layout` while the sites pin library 0.3.0; `site` once they pin a version that declares it |
+| The sites' components (`components/*.css`) | `site`, the layer the library leaves for them (library 0.4.0 and later) |
 
 - **One file per component**, named after its block class, with a banner saying what it is.
 - **Tokens before properties.** Set a library component's token in `tokens.css` before writing a rule for it.

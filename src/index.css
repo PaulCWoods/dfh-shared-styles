@@ -6,18 +6,18 @@
    site's own CSS. Each file goes into the library's cascade layers:
    - tokens: component choices and the sites' own tokens
    - reset: page-wide behaviour
-   - layout: the sites' components, after the library's components and
-     layout and under its utilities. They move to the library's site layer
-     when the sites pin a library version that declares it (after 0.3.0).
+   - site: the sites' components, the layer the library leaves for them:
+     after its components and layout, and under its utilities (library
+     0.4.0 and later)
    ========================================================================== */
 
 @import url("tokens.css") layer(tokens);
 @import url("view-transitions.css") layer(reset);
 
-@import url("components/article.css") layer(layout);
-@import url("components/brand-frame.css") layer(layout);
-@import url("components/card-list.css") layer(layout);
-@import url("components/grid.css") layer(layout);
-@import url("components/index-card.css") layer(layout);
-@import url("components/section.css") layer(layout);
-@import url("components/site-trail.css") layer(layout);
+@import url("components/article.css") layer(site);
+@import url("components/brand-frame.css") layer(site);
+@import url("components/card-list.css") layer(site);
+@import url("components/grid.css") layer(site);
+@import url("components/index-card.css") layer(site);
+@import url("components/section.css") layer(site);
+@import url("components/site-trail.css") layer(site);

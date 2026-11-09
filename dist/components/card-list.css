@@ -1,2 +1,2 @@
-/* DFH Shared Styles 0.2.0, for DFH Components 0.3.0 */
-@layer layout{:where(.card-list){& li{display:flex;container-type:inline-size}:where(.section.section--strong-1st) &{& li:first-child{grid-column:1/-1}}}}
+/* DFH Shared Styles 0.3.0, for DFH Components 0.4.0 */
+@layer site{:where(.card-list){& li{display:flex;container-type:inline-size}:where(.section.section--strong-1st) &{& li:first-child{grid-column:1/-1}}}}
