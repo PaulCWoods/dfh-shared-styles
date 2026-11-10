@@ -1,13 +1,13 @@
 # DFH Shared Styles
 
-The CSS the Design For Humans sites share on top of [DFH Components](https://components.designforhumans.blog): the article, section, card list, index card and grid settings, the brand frame, the header's site trail, and the sites' component token choices.
+The CSS the Design For Humans sites share on top of [DFH Components](https://components.designforhumans.blog): the article, section, card list and index card, the brand frame, the reading progress, and the sites' component token choices.
 
 Link it after the library and its theme, before a site's own CSS:
 
 ```html
-<link rel="stylesheet" href="https://components.designforhumans.blog/css/0.4.0/dfh-components.css">
-<link rel="stylesheet" href="https://components.designforhumans.blog/css/0.4.0/themes/dfh.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/PaulCWoods/dfh-shared-styles@0.2.0/dist/dfh-site.css">
+<link rel="stylesheet" href="https://components.designforhumans.blog/css/0.5.1/dfh-components.css">
+<link rel="stylesheet" href="https://components.designforhumans.blog/css/0.5.1/themes/dfh.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/PaulCWoods/dfh-shared-styles@0.5.0/dist/dfh-site.css">
 <link rel="stylesheet" href="/css/site.css">
 ```
 

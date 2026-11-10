@@ -17,7 +17,6 @@
 @import url("components/article.css") layer(site);
 @import url("components/brand-frame.css") layer(site);
 @import url("components/card-list.css") layer(site);
-@import url("components/grid.css") layer(site);
 @import url("components/index-card.css") layer(site);
 @import url("components/reading-progress.css") layer(site);
 @import url("components/section.css") layer(site);
