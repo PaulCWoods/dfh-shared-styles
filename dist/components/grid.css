@@ -1,2 +1,2 @@
-/* DFH Shared Styles 0.3.0, for DFH Components 0.4.0 */
+/* DFH Shared Styles 0.4.0, for DFH Components 0.5.0 */
 @layer site{:where(.grid){@media screen and (width<48em) and (hover:none){:where(.s-grid\:scroll-x\@\<md) &{inline-size:100vw;margin-inline:calc(var(--spacing-cushion) * -1);padding-block-end:var(--spacing);padding-inline:var(--spacing-cushion);overscroll-behavior-x:contain;scroll-snap-type:x mandatory;display:flex;overflow:auto;&>:where(*){scroll-snap-align:center;flex:1 0 90%}}}}:where(.s-grid\:sm .grid){--grid-min:24rem}:where(.s-grid\:xs .grid){--card-padding:var(--card-compact-padding,var(--spacing));--card-inner-padding:var(--card-compact-inner-padding,var(--spacing));--grid-min:18rem}}
