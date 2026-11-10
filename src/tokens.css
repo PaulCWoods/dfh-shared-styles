@@ -14,7 +14,7 @@
   --accordion-radius: var(--radius-md);
 
   /* Badge */
-  --badge-dot-size: var(--spacing-8);
+  --badge-dot-size: var(--spacing-sm);
 
   /* Block link */
   --block-link-line-height: var(--small-heading-line-height);
@@ -25,23 +25,33 @@
   /* Field */
   --label-font-weight: var(--body-strong-font-weight);
 
-  /* Header and footer sit on the page surface */
+  /* Header and footer sit on the page surface; a bar is a large target
+     tall, or a target tall when compact */
   --header-bg: var(--surface);
   --footer-bg: var(--surface);
-  --header-bar-min-size: var(--spacing-64);
-  --header-compact-bar-min-size: var(--spacing-48);
-  --header-height: calc(var(--header-bar-min-size) + var(--spacing-8) * 2 + var(--border-width, 1px));
-  --header-compact-height: calc(var(--header-compact-bar-min-size) + var(--spacing-4) * 2 + var(--border-width, 1px));
+  --header-bar-min-size: var(--spacing-target-lg);
+  --header-compact-bar-min-size: var(--spacing-target);
+  --header-height: calc(
+    var(--header-bar-min-size) + var(--spacing-sm) * 2 +
+      var(--border-width, 1px)
+  );
+  --header-compact-height: calc(
+    var(--header-compact-bar-min-size) + var(--spacing-xs) * 2 +
+      var(--border-width, 1px)
+  );
 
   /* Prose */
-  --prose-scroll-margin: calc(var(--header-height) + var(--safe-area-inset-top, 0px) + var(--spacing-scroll-margin));
+  --prose-scroll-margin: calc(
+    var(--header-height) + var(--safe-area-inset-top, 0px) +
+      var(--spacing-scroll-margin)
+  );
 
   /* Tab list */
   --tab-list-indicator-width: var(--border-width-2);
 
   /* Telemetry */
   --telemetry-subtle-bg: var(--surface-muted);
-  --telemetry-gap: var(--spacing-4);
+  --telemetry-gap: var(--spacing-xs);
 
   /* What the dfh theme can't say yet: a 1px quiet border (Tier 2 gives
      every theme the default width) */
@@ -52,7 +62,6 @@
   /* Article */
   --article-figcaption-border: var(--border-quiet);
   --article-figcaption-padding: calc(var(--spacing) - var(--border-width));
-  --article-footer-font-size: var(--typography-font-size--1);
 
   /* Index card: a large card's title takes the title style */
   --card-border-top: var(--border-width-thick) solid;

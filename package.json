@@ -8,9 +8,11 @@
     "library": "0.5.1"
   },
   "scripts": {
-    "build": "node scripts/build.mjs"
+    "build": "node scripts/build.mjs",
+    "format": "prettier --write \"src/**/*.css\""
   },
   "devDependencies": {
-    "lightningcss": "^1.29.0"
+    "lightningcss": "^1.29.0",
+    "prettier": "^3.9.10"
   }
 }

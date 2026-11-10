@@ -33,15 +33,15 @@
   }
 }
 
+/* Its text takes .small-text in the markup */
 .article__footer {
-  font-size: var(--article-footer-font-size);
-  margin-block-start: calc(var(--spacing-breathe) * var(--sizing-ratio));
+  margin-block-start: var(--spacing-cushion-lg);
 
   &:not(:last-child) {
-    margin-block-end: calc(var(--spacing-breathe) * var(--sizing-ratio));
+    margin-block-end: var(--spacing-cushion-lg);
   }
 
-  .article__header + & {
+  .article__header+& {
     margin-block-start: var(--spacing);
   }
 }
@@ -49,8 +49,8 @@
 /* Figures: the size and look come from the CMS (Craft's figure size and
    classes, WordPress's image classes) */
 :where(.article__figure) {
-  --gap: var(--spacing-8);
-  margin-block: calc(var(--spacing-breathe) * var(--sizing-ratio));
+  --gap: var(--spacing-sm);
+  margin-block: var(--spacing-cushion-lg);
 
   img {
     inline-size: 100%;
@@ -94,13 +94,14 @@
   --embed-aspect-ratio: 16/9;
 
   iframe {
-    height: auto;
     aspect-ratio: var(--embed-aspect-ratio);
+    block-size: auto;
   }
 
+  /* An embed with no ratio of its own takes a fixed height */
   @container style(--embed-aspect-ratio: auto) {
     iframe {
-      height: 300px;
+      block-size: var(--article-embed-block-size, 18.75rem);
     }
   }
 }
@@ -136,4 +137,3 @@
     grid-column: span 1;
   }
 }
-
