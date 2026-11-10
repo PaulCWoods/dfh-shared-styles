@@ -1,2 +1,2 @@
-/* DFH Shared Styles 0.5.0, for DFH Components 0.5.1 */
+/* DFH Shared Styles 0.5.1, for DFH Components 0.5.1 */
 @layer site{:where(.section){--font-sizing:fluid;border-block-start:var(--border-width-thin) dashed var(--border-color-quiet);padding-block:var(--section-spacing,var(--spacing-cushion))}:where(.section__title){text-wrap:balance;margin-block-end:var(--spacing-cushion);padding-block:0;&[id]{scroll-margin-block:var(--prose-scroll-margin,1em)}}.section__pagination{padding-block-start:var(--section-spacing,var(--spacing-breathe))}}

@@ -41,7 +41,7 @@
     margin-block-end: var(--spacing-cushion-lg);
   }
 
-  .article__header+& {
+  .article__header + & {
     margin-block-start: var(--spacing);
   }
 }
